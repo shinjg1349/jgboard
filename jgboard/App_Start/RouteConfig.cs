@@ -17,7 +17,9 @@ namespace jgboard
                 name: "Default",
                 url: "{controller}/{action}/{id}",
                 defaults: new { controller = "Board", action = "BoardList", id = UrlParameter.Optional }
-            );
+            
+                
+                );
         }
     }
 }
