@@ -18,17 +18,18 @@
             <td>등록일</td>
         </tr>
     </thead>
+
+    <tbody>
+        @foreach (var item in Model)
+            {
+            <tr>
+                <td>@item.Title</td>
+
+            </tr>
+        }
+
+
+    </tbody>
+
 </table>
 
-<tbody>
-            @foreach (var item in Model)
-            {
-                <tr>
-                    <td>@item.SEQ</td>
-
-
-                </tr>
-            }
-
-
-</tbody>

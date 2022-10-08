@@ -8,10 +8,12 @@ namespace jgboard.Models
 {
     public class BoardDTO
     {
-        [key]
-        int SEQ { set; get; }
-        [Required]
-        string Title { set; get; }
+
+
+      [key]
+      public  int SEQ { set; get; }
+      [Required]
+      public string Title { set; get; }
 
         string ContestS { set; get; }
 

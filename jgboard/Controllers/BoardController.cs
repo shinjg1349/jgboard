@@ -11,7 +11,7 @@ namespace jgboard.Controllers
     public class BoardController : Controller
     {
 
-        List<BoardDTO> dr= new List<BoardDTO>();
+        public List<BoardDTO> dr= new List<BoardDTO>();
 
 
         public ActionResult BoardList()
@@ -30,7 +30,7 @@ namespace jgboard.Controllers
                     {
                         dr.Add(new BoardDTO
                         {
-                            SEQ = Convert.ToString(rs["seq"]),
+                            
                             Title = rs["x_title"].ToString()
 
 
