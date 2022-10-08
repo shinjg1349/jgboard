@@ -30,17 +30,19 @@ namespace jgboard.Controllers
                     {
                         dr.Add(new BoardDTO
                         {
-                            
+                            SEQ = Convert.ToString(rs["seq"]),
+                            Title = rs["x_title"].ToString()
+
 
                         });
 
                     }
 
-
-
-
-                }catch
+                }
+                catch (Exception ex)
                 {
+                    Console.WriteLine("실패");
+                    Console.WriteLine(ex.ToString());
 
                 }
 

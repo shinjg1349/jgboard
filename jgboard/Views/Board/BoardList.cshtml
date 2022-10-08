@@ -1,4 +1,6 @@
-﻿
+﻿@model IEnumerable<jgboard.Models.BoardDTO>
+
+
 @{
     ViewBag.Title = "BoardList";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -19,7 +21,14 @@
 </table>
 
 <tbody>
-    test
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>@item.SEQ</td>
+
+
+                </tr>
+            }
 
 
 </tbody>

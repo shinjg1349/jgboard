@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 using System.Linq;
 using System.Web;
 
@@ -7,18 +8,14 @@ namespace jgboard.Models
 {
     public class BoardDTO
     {
-        [Request]
-        int seq { set; get; }
+        [key]
+        int SEQ { set; get; }
+        [Required]
+        string Title { set; get; }
 
-        string x_title { set; get; }
+        string ContestS { set; get; }
 
-        string x_contents { set; get; }
-
-        int x_date { set; get; }
-
-
-
-
+        int Date { set; get; }
 
 
     }
