@@ -1,6 +1,5 @@
 ﻿@model IEnumerable<jgboard.Models.BoardDTO>
 
-
 @{
     ViewBag.Title = "BoardList";
     Layout = "~/Views/Shared/_Layout.cshtml";
@@ -23,8 +22,9 @@
         @foreach (var item in Model)
             {
             <tr>
+                <td>@item.SEQ</td>
                 <td>@item.Title</td>
-
+                <td>@item.Contents</td>
             </tr>
         }
 

@@ -16,7 +16,9 @@ namespace jgboard.Controllers
 
         public ActionResult BoardList()
         {
-            using (MySqlConnection connection = new MySqlConnection("Server=localhost;port=3306;Database=project;Uid=root;pwd=134078;SslMode=none;"))
+
+
+            using (MySqlConnection connection = new MySqlConnection("Server=localhost;Port=3306;Database=project;Uid=shin;Pwd=134078;SslMode=none;"))
                 try
                 {
 
@@ -30,25 +32,27 @@ namespace jgboard.Controllers
                     {
                         dr.Add(new BoardDTO
                         {
-                            
-                            Title = rs["x_title"].ToString()
 
+
+
+
+                            SEQ = Convert.ToInt16(rs["seq"]),
+                            Title = rs["x_title"].ToString(),
+                            Contents = rs["x_contents"].ToString(),
+                            Date = rs["x_date"].ToString()
+                        
 
                         });
 
                     }
-
                 }
                 catch (Exception ex)
                 {
-                    Console.WriteLine("실패");
                     Console.WriteLine(ex.ToString());
 
                 }
 
-
-
-                return View();
+                return View(dr);
         }
     }
 }

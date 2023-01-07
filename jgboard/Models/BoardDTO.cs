@@ -14,11 +14,10 @@ namespace jgboard.Models
       public  int SEQ { set; get; }
       [Required]
       public string Title { set; get; }
-
-        string ContestS { set; get; }
-
-        int Date { set; get; }
-
+      [Required]
+      public string Contents { set; get; }
+      [Required]
+      public string Date { set; get; }
 
     }
 }
